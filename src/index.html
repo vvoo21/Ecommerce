@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce product page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+  <header>
+    <div class="menu-container">
+      <a href="#"><img src="./images/icon-menu.svg" alt="menu icon"></a>
+      <a href="#"><img src="./images/logo.svg" alt="logo"></a>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar-items">
+        <li><a class="navbar-link" href="#">Collections</a></li>
+        <li><a class="navbar-link" href="#">Men</a></li>
+        <li><a class="navbar-link" href="#">Women</a></li>
+        <li><a class="navbar-link" href="#">About</a></li>
+        <li><a class="navbar-link" href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Start modal navbar -->
+    <div class="modal-navbar-bg">
+      <nav class="modal-navbar">
+        <img class="modal-navbar-close" src="./images/icon-close.svg" alt="close icon">
+        <ul class="modal-navbar-items">
+          <li><a class="modal-navbar-link" href="#">Collections</a></li>
+          <li><a class="modal-navbar-link" href="#">Men</a></li>
+          <li><a class="modal-navbar-link" href="#">Women</a></li>
+          <li><a class="modal-navbar-link" href="#">About</a></li>
+          <li><a class="modal-navbar-link" href="#">Contact</a></li>
+        </ul>
+      </nav>        
+    </div>
+    <!-- End modal navbar -->
+
+    <div class="cart-avatar">
+      <div class="cart-container">
+        <div class="cart-notification">3</div>
+        <img src="./images/icon-cart.svg" alt="shopping cart">
+      </div>
+      <img src="./images/image-avatar.png" alt="avatar">
+    </div>
+  </header>
+  <main>
+    <section class="content">
+      <article class="gallery">
+        <div class="image-container">
+          <img class="gallery-previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="gallery-next" src="./images/icon-next.svg" alt="next">
+        </div>
+        <div class="gallery-thumnails">
+          <img id="1" class="thumnail" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
+          <img id="2" class="thumnail" src="./images/image-product-2-thumbnail.jpg" alt="thumnail">
+          <img id="3" class="thumnail" src="./images/image-product-3-thumbnail.jpg" alt="thumnail">
+          <img id="4" class="thumnail" src="./images/image-product-4-thumbnail.jpg" alt="thumnail">
+        </div>
+      </article>
+      <article class="details">
+        <h2 class="details-company"></h2>
+      </article>     
+    </section>
+  </main>
+  <footer></footer>
 </body>
 </html>
