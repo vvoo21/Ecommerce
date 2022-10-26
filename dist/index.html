@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce product page</title>
-<script defer src="main.js"></script></head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <title>Frontend Mentor | E-commerce product page</title>
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
-    <h1>Hello webpack!</h1>
+  <header>
+    <div class="menu-container">
+      <a class="icon-menu hover" href="#"><img src="./images/icon-menu.svg" alt="menu icon"></a>
+      <a class="hover" href="#"><img src="./images/logo.svg" alt="logo"></a>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar-items">
+        <li><a class="navbar-link" href="#">Collections</a></li>
+        <li><a class="navbar-link" href="#">Men</a></li>
+        <li><a class="navbar-link" href="#">Women</a></li>
+        <li><a class="navbar-link" href="#">About</a></li>
+        <li><a class="navbar-link" href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Start modal navbar -->
+    <div class="modal-navbar-bg">
+      <nav class="modal-navbar">
+        <img class="modal-navbar-close" src="./images/icon-close.svg" alt="close icon">
+        <ul class="modal-navbar-items">
+          <li><a class="modal-navbar-link" href="#">Collections</a></li>
+          <li><a class="modal-navbar-link" href="#">Men</a></li>
+          <li><a class="modal-navbar-link" href="#">Women</a></li>
+          <li><a class="modal-navbar-link" href="#">About</a></li>
+          <li><a class="modal-navbar-link" href="#">Contact</a></li>
+        </ul>
+      </nav>        
+    </div>
+    <!-- End modal navbar -->
+
+    <div class="cart-avatar">
+      <div class="cart-container hover">
+        <div class="cart-notification">3</div>
+        <img src="./images/icon-cart.svg" alt="shopping cart">
+      </div>
+      <img class="avatar hover" src="./images/image-avatar.png" alt="avatar" width="25" height="25">
+    </div>
+  </header>
+  <main>
+    <section class="content">
+      <article class="gallery">
+        <div class="image-container">
+          <img class="gallery-previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="gallery-next" src="./images/icon-next.svg" alt="next">
+        </div>
+        <div class="gallery-thumnails">
+          <img id="1" class="thumnail" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
+          <img id="2" class="thumnail" src="./images/image-product-2-thumbnail.jpg" alt="thumnail">
+          <img id="3" class="thumnail" src="./images/image-product-3-thumbnail.jpg" alt="thumnail">
+          <img id="4" class="thumnail" src="./images/image-product-4-thumbnail.jpg" alt="thumnail">
+        </div>
+      </article>
+      <article class="details">
+        <h2 class="details-company">Sneaker Company</h2>
+        <h2 class="details-title">Fall Limited Edition Sneakers</h2>
+        <p class="details-description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div  class="details-prices">
+          <p class="price-now">$125.00 <span class="discount">50%</span></p>
+          <p class="price-before">$250.00</p>
+        </div>
+        <div class="details-quantity">
+          <div class="input">
+            <img class="input-minus" src="./images/icon-minus.svg" alt="minus">
+            <input class="input-number" type="number" value="0" name="quantity" aria-label="quantity">
+            <img class="input-plus" src="./images/icon-plus.svg" alt="plus">
+          </div>
+          <button class="details-button"> <img src="./images/icon-cart.svg" alt="shopping cart"> Add to cart</button>
+        </div>
+      </article>     
+    </section>
+
+    <!-- start modal cart -->
+    <div class="cart-modal">
+      <table class="cart-modal-details">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="./images/image-product-1-thumbnail.jpg" alt="thumnail"></td>
+            <td>Autumn Limited Edition...</td>
+            <td>$125.00</td>
+            <td>3</td>
+            <td><img class="cart-modal-delete" src="./images/icon-delete.svg" alt="delete"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="cart-modal-button">Checkout</button>
+    </div>
+    <!-- End modal cart -->
+
+    <!-- start modal gallery -->
+    <div class="modal-gallery-bg">
+      <article class="modal-gallery">
+        <img class="modal-gallery-close" src="./images/icon-close.svg" alt="icon close">
+        <div class="modal-gallery-img-container">
+          <img class="modal-gallery-previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="modal-gallery-next" src="./images/icon-next.svg" alt="next">
+        </div>
+        <div class="modal-gallery-thumnails">
+          <img id="modal1" class="modal-gallery-thumnail" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
+          <img id="modal2" class="modal-gallery-thumnail" src="./images/image-product-2-thumbnail.jpg" alt="thumnail">
+          <img id="modal3" class="modal-gallery-thumnail" src="./images/image-product-3-thumbnail.jpg" alt="thumnail">
+          <img id="modal4" class="modal-gallery-thumnail" src="./images/image-product-4-thumbnail.jpg" alt="thumnail">
+        </div>
+      </article>
+    </div>
+    <!-- End modal gallery -->
+  </main>
+  <footer class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/vvoo21/Ecommerce" target="_blank">Vanessa Oliveros</a>.>
+  </footer>
 </body>
 </html>
