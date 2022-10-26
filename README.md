@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://vvoo21.github.io/Ecommerce/dist)
+- [See Solution](https://github.com/vvoo21/Ecommerce)
+- [See Demo](https://vvoo21.github.io/Leaderboard/dist/)
 
 ## My process
 
