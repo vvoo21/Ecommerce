@@ -26,7 +26,7 @@
     <!-- Start modal navbar -->
     <div class="modal-navbar-bg">
       <nav class="modal-navbar">
-        <img class="modal-navbar-close" src="./images/icon-close.svg" alt="close icon">
+        <img class="modal-navbar-close hover" src="./images/icon-close.svg" alt="close icon">
         <ul class="modal-navbar-items">
           <li><a class="modal-navbar-link" href="#">Collections</a></li>
           <li><a class="modal-navbar-link" href="#">Men</a></li>
@@ -49,11 +49,12 @@
   <main>
     <section class="content">
       <article class="gallery">
-        <div class="image-container">
-          <img class="gallery-previous" src="./images/icon-previous.svg" alt="previous">
-          <img class="gallery-next" src="./images/icon-next.svg" alt="next">
+        <div class="image-container hover">
+          <img class="gallery-image" src="./images/image-product-1.jpg" alt="image product">
+          <img class="gallery-previous hover" src="./images/icon-previous.svg" alt="previous">
+          <img class="gallery-next hover" src="./images/icon-next.svg" alt="next">
         </div>
-        <div class="gallery-thumnails">
+        <div class="gallery-thumnails hover">
           <img id="1" class="thumnail" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
           <img id="2" class="thumnail" src="./images/image-product-2-thumbnail.jpg" alt="thumnail">
           <img id="3" class="thumnail" src="./images/image-product-3-thumbnail.jpg" alt="thumnail">
@@ -62,7 +63,7 @@
       </article>
       <article class="details">
         <h2 class="details-company">Sneaker Company</h2>
-        <h2 class="details-title">Fall Limited Edition Sneakers</h2>
+        <h2 class="details-title">Fall Limited Edition <br> Sneakers</h2>
         <p class="details-description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
         <div  class="details-prices">
           <p class="price-now">$125.00 <span class="discount">50%</span></p>
@@ -70,11 +71,11 @@
         </div>
         <div class="details-quantity">
           <div class="input">
-            <img class="input-minus" src="./images/icon-minus.svg" alt="minus">
-            <input class="input-number" type="number" value="0" name="quantity" aria-label="quantity">
-            <img class="input-plus" src="./images/icon-plus.svg" alt="plus">
+            <img class="input-minus" src="./images/icon-minus.svg" alt="minus" width="12" height="4">
+            <input class="input-number" type="text" value="0" name="quantity" aria-label="quantity">
+            <img class="input-plus" src="./images/icon-plus.svg" alt="plus" width="12" height="12">
           </div>
-          <button class="details-button"> <img src="./images/icon-cart.svg" alt="shopping cart"> Add to cart</button>
+          <button type="button" class="details-button hover"> <img src="./images/icon-cart-white.svg" alt="shopping cart"> Add to cart</button>
         </div>
       </article>     
     </section>
@@ -82,7 +83,7 @@
     <!-- start modal cart -->
     <div class="cart-modal">
       <table class="cart-modal-details">
-        <thead>
+        <thead class="thead">
           <tr>
             <th>Image</th>
             <th>Description</th>
@@ -93,25 +94,26 @@
         </thead>
         <tbody>
           <tr>
-            <td><img src="./images/image-product-1-thumbnail.jpg" alt="thumnail"></td>
-            <td>Autumn Limited Edition...</td>
+            <td><img class="cart-img" src="./images/image-product-1-thumbnail.jpg" alt="thumnail" width="60" height="60"></td>
+            <td class="cart-description">Autumn Limited Edition...</td>
             <td>$125.00</td>
             <td>3</td>
             <td><img class="cart-modal-delete" src="./images/icon-delete.svg" alt="delete"></td>
           </tr>
         </tbody>
       </table>
-      <button class="cart-modal-button">Checkout</button>
+      <button type="button" class="details-button cart-modal-button">Checkout</button>
     </div>
     <!-- End modal cart -->
 
     <!-- start modal gallery -->
     <div class="modal-gallery-bg">
       <article class="modal-gallery">
-        <img class="modal-gallery-close" src="./images/icon-close.svg" alt="icon close">
-        <div class="modal-gallery-img-container">
-          <img class="modal-gallery-previous" src="./images/icon-previous.svg" alt="previous">
-          <img class="modal-gallery-next" src="./images/icon-next.svg" alt="next">
+        <img class="modal-gallery-close hover" src="./images/icon-close-white.svg" alt="icon close" width="20" height="20">
+        <div class="modal-image-container hover">
+          <img class="modal-gallery-image" src="./images/image-product-1.jpg" alt="image product">
+          <img class="modal-gallery-previous hover" src="./images/icon-previous.svg" alt="previous">
+          <img class="modal-gallery-next hover" src="./images/icon-next.svg" alt="next">
         </div>
         <div class="modal-gallery-thumnails">
           <img id="modal1" class="modal-gallery-thumnail" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
@@ -123,7 +125,8 @@
     </div>
     <!-- End modal gallery -->
   </main>
-  <footer class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/vvoo21/Ecommerce" target="_blank">Vanessa Oliveros</a>.>
+  <footer>
+    <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a href="https://github.com/vvoo21/Ecommerce">Vanessa Oliveros</a>.</p>
   </footer>
 </body>
 </html>
