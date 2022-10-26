@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - [See Solution](https://github.com/vvoo21/Ecommerce)
-- [See Demo](https://vvoo21.github.io/Leaderboard/dist/)
+- [See Demo](https://vvoo21.github.io/Ecommerce/dist/)
 
 ## My process
 
