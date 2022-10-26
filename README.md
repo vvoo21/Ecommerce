@@ -83,6 +83,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
+- Hat tip to The Frontend Mentor challenges!
 - Hat tip to The Microverse Program!
 
 ## 📝 License
