@@ -24,6 +24,7 @@
 body {
   font-family: 'Kumbh Sans', sans-serif;
   background-color: var(--white);
+  position: relative;
 }
 
 header {
@@ -125,10 +126,14 @@ header {
 
 .image-container {
   width: 100%;
-  height: 300px;
-  background-image: url(./images/image-product-1.jpg);
-  background-size: cover;
-  background-position-y: -35px;
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
 }
 
 .gallery-previous {
@@ -138,8 +143,8 @@ header {
   height: 40px;
   padding: 12px;
   position: absolute;
-  top: 180px;
-  left: 15px;
+  top: 50%;
+  left: 10%;
 }
 
 .gallery-next {
@@ -149,8 +154,8 @@ header {
   height: 40px;
   padding: 12px;
   position: absolute;
-  top: 180px;
-  left: 320px;
+  top: 50%;
+  left: 85%;
 }
 
 .gallery-thumnails {
@@ -238,7 +243,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 5px;
+  padding: 5px;
   border: none;
   border-radius: 8px;
   background-color: var(--orange);
@@ -257,7 +263,67 @@ header {
   display: none;
 }
 
+.cart-modal {
+  width: 360px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px;
+  position: absolute;
+  top: 75px;
+  right: 6px;
+  background-color: var(--white);
+  flex-direction: column;
+}
+
+.cart-modal-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+thead,
+tbody {
+  padding: 15px;
+}
+
+thead,
+tbody,
+tr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+td,
+th {
+  padding: 5px;
+}
+
+tbody {
+  flex-direction: column;
+  height: 250px;
+  overflow-y: scroll;
+  border-top: 1px solid var(--grayish-blue);
+  border-bottom: 1px solid var(--grayish-blue);
+  margin-bottom: 10px;
+}
+
+th {
+  font-size: 1.1rem;
+}
+
+.cart-description {
+  width: 80px;
+}
+
+.cart-modal-button {
+  width: 350px;
+  align-self: center;
+}
+
 footer {
+  width: 90%;
+  margin: auto;
   padding: 2rem 1.5rem;
   display: flex;
   background-color: var(--white);
@@ -322,7 +388,151 @@ footer {
     height: 40px;
   }
 
-  .gallery-thumnails {
-    display: flex;
+  main {
+    width: 90%;
+    margin: auto;
   }
+
+  .content {
+    flex-direction: row;
+    padding: 90px 50px;
+    gap: 90px;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery {
+    width: 40%;
+    height: auto;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    margin: 0;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .gallery-next,
+  .gallery-previous {
+    display: none;
+  }
+
+   .gallery-thumnails {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .thumnail,
+  .modal-gallery-thumnail {
+    border-radius: 16px;
+    width: 20%;
+  }
+
+  .thumnail:hover, 
+  .modal-gallery-thumnail:hover {
+    border: 2px solid var(--orange);
+    opacity: 0.7;
+  }
+
+  .details {
+    padding-top: 50px;
+    width: 50%;
+  }
+
+  .details-title {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+
+  .details-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .details-prices {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .details-quantity {
+    display: flex;
+    gap: 20px;
+  }
+
+  .modal-gallery-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black-modal);
+    z-index: 1;
+  }
+  
+  .modal-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .modal-gallery-close {
+   margin-left: 460px;
+  }
+
+  .modal-image-container {
+    position: relative;
+  }
+ 
+  .modal-gallery-image {
+    width: 100%;
+    height: 447px;
+    border-radius: 16px;
+  }
+
+.modal-gallery-previous {
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  position: absolute;
+  top: 50%;
+  left: -5%;
+}
+
+.modal-gallery-next {
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  position: absolute;
+  top: 50%;
+  left: 96%;
+}
+
+.modal-gallery-thumnails {
+  display: flex;
+  justify-content: space-between;
+}
+
+  
 }

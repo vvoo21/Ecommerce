@@ -50,10 +50,11 @@
     <section class="content">
       <article class="gallery">
         <div class="image-container hover">
+          <img class="gallery-image" src="./images/image-product-1.jpg" alt="image product">
           <img class="gallery-previous hover" src="./images/icon-previous.svg" alt="previous">
           <img class="gallery-next hover" src="./images/icon-next.svg" alt="next">
         </div>
-        <div class="gallery-thumnails">
+        <div class="gallery-thumnails hover">
           <img id="1" class="thumnail" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
           <img id="2" class="thumnail" src="./images/image-product-2-thumbnail.jpg" alt="thumnail">
           <img id="3" class="thumnail" src="./images/image-product-3-thumbnail.jpg" alt="thumnail">
@@ -82,7 +83,7 @@
     <!-- start modal cart -->
     <div class="cart-modal">
       <table class="cart-modal-details">
-        <thead>
+        <thead class="thead">
           <tr>
             <th>Image</th>
             <th>Description</th>
@@ -93,25 +94,26 @@
         </thead>
         <tbody>
           <tr>
-            <td><img src="./images/image-product-1-thumbnail.jpg" alt="thumnail"></td>
-            <td>Autumn Limited Edition...</td>
+            <td><img class="cart-img" src="./images/image-product-1-thumbnail.jpg" alt="thumnail" width="60" height="60"></td>
+            <td class="cart-description">Autumn Limited Edition...</td>
             <td>$125.00</td>
             <td>3</td>
             <td><img class="cart-modal-delete" src="./images/icon-delete.svg" alt="delete"></td>
           </tr>
         </tbody>
       </table>
-      <button class="cart-modal-button">Checkout</button>
+      <button class="details-button cart-modal-button">Checkout</button>
     </div>
     <!-- End modal cart -->
 
     <!-- start modal gallery -->
     <div class="modal-gallery-bg">
       <article class="modal-gallery">
-        <img class="modal-gallery-close" src="./images/icon-close.svg" alt="icon close">
-        <div class="modal-gallery-img-container">
-          <img class="modal-gallery-previous" src="./images/icon-previous.svg" alt="previous">
-          <img class="modal-gallery-next" src="./images/icon-next.svg" alt="next">
+        <img class="modal-gallery-close" src="./images/icon-close-white.svg" alt="icon close" width="20" height="20">
+        <div class="modal-image-container hover">
+          <img class="modal-gallery-image" src="./images/image-product-1.jpg" alt="image product">
+          <img class="modal-gallery-previous hover" src="./images/icon-previous.svg" alt="previous">
+          <img class="modal-gallery-next hover" src="./images/icon-next.svg" alt="next">
         </div>
         <div class="modal-gallery-thumnails">
           <img id="modal1" class="modal-gallery-thumnail" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
