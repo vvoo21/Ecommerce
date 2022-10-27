@@ -436,15 +436,15 @@ footer {
   }
 
   .thumnail,
-  .modal-gallery-thumnail {
+  .modal-thumnail {
     border-radius: 16px;
     width: 20%;
   }
 
   .thumnail:hover,
-  .modal-gallery-thumnail:hover {
+  .modal-thumnail:hover {
     border: 2px solid var(--orange);
-    opacity: 0.7;
+    opacity: 0.75;
   }
 
   .details {
@@ -496,6 +496,10 @@ footer {
 
   .modal-gallery-close {
     margin-left: 460px;
+  }
+  
+  .modal-gallery-close:hover {
+    background-color: var(--orange);
   }
 
   .modal-image-container {
