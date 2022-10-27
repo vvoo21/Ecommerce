@@ -259,12 +259,12 @@ header {
   opacity: 0.75;
 }
 
-.cart-modal,
 .modal-gallery-bg {
   display: none;
 }
 
 .cart-modal {
+  display: none;
   width: 360px;
   border-radius: 8px;
   box-shadow: 3px 3px 10px;
@@ -273,6 +273,10 @@ header {
   right: 6px;
   background-color: var(--white);
   flex-direction: column;
+}
+
+.show {
+  display: flex;
 }
 
 .cart-modal-details {
