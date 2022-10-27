@@ -22,26 +22,24 @@ const imgThumnail = document.querySelectorAll('.thumnail');
 let imgIndex = 1;
 
 const nextImg = (imgContainer) => {
-
-  if(imgIndex === 4){
+  if (imgIndex === 4) {
     imgIndex = 1;
   } else {
     imgIndex += 1;
   }
 
   imgContainer.setAttribute('src', `./images/image-product-${imgIndex}.jpg`);
-}
+};
 
 const previousImg = (imgContainer) => {
-
-  if(imgIndex === 1){
+  if (imgIndex === 1) {
     imgIndex = 4;
   } else {
     imgIndex -= 1;
   }
 
   imgContainer.setAttribute('src', `./images/image-product-${imgIndex}.jpg`);
-}
+};
 
 const displayModalNavbar = () => {
   modalnavbar.style.display = 'flex';
@@ -58,7 +56,7 @@ const openCart = () => {
 const displayModalGallery = () => {
   modalGallery.style.display = 'flex';
 
-  if(window.screen.width < 768){
+  if (window.screen.width < 768) {
     modalGallery.style.display = 'none';
   }
 };
@@ -74,33 +72,32 @@ cart.addEventListener('click', openCart);
 imgThumnail.forEach((img) => {
   img.addEventListener('click', (e) => {
     galleryImg.setAttribute('src', `./images/image-product-${e.target.id}.jpg`);
-  })
+  });
 });
 
 galleryImg.addEventListener('click', displayModalGallery);
 
 closeIconModalGallery.addEventListener('click', closeModalGallery);
 
-galleryNext.addEventListener('click', () =>{
+galleryNext.addEventListener('click', () => {
   nextImg(galleryImg);
 });
 
-galleryPrevious.addEventListener('click', () =>{
+galleryPrevious.addEventListener('click', () => {
   previousImg(galleryImg);
 });
 
-galleryModalNext.addEventListener('click', () =>{
+galleryModalNext.addEventListener('click', () => {
   nextImg(imgModalGallery);
 });
 
-galleryModalPrevious.addEventListener('click', () =>{
+galleryModalPrevious.addEventListener('click', () => {
   previousImg(imgModalGallery);
 });
 
 ModalThumnail.forEach((element) => {
-  element.addEventListener('click', e => {
+  element.addEventListener('click', (e) => {
     const idImg = e.target.id - 4;
     imgModalGallery.setAttribute('src', `./images/image-product-${idImg}.jpg`);
-  })
+  });
 });
-

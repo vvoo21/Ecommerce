@@ -497,7 +497,7 @@ footer {
   .modal-gallery-close {
     margin-left: 460px;
   }
-  
+
   .modal-gallery-close:hover {
     background-color: var(--orange);
   }
