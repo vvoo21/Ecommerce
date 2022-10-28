@@ -4,7 +4,6 @@ export const closeIcon = document.querySelector('.modal-navbar-close');
 
 export const cart = document.querySelector('.cart-container');
 export const modalCart = document.querySelector('.cart-modal');
-export const addBtn = document.querySelector('.add-to-cart');
 
 export const modalGallery = document.querySelector('.modal-gallery-bg');
 export const closeIconModalGallery = document.querySelector('.modal-gallery-close');
@@ -17,3 +16,11 @@ export const galleryImg = document.querySelector('.gallery-image');
 export const galleryPrevious = document.querySelector('.gallery-previous');
 export const galleryNext = document.querySelector('.gallery-next');
 export const imgThumnail = document.querySelectorAll('.thumnail');
+
+export let minusBtn = document.querySelector('.input-minus');
+export let plusBtn = document.querySelector('.input-plus');
+export let userInput = document.querySelector('.input-number');
+
+export const addBtn = document.querySelector('.add-to-cart');
+export let notification = document.querySelector('.cart-notification');
+export const cartModalContainer = document.querySelector('.cart-modal-container');

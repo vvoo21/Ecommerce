@@ -344,6 +344,16 @@ footer {
   color: var(--dark-grayish-blue);
 }
 
+.cart-empty {
+  width: 360px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--black-modal);
+}
+
 @media screen and (min-width: 768px) {
   header {
     width: 90%;
