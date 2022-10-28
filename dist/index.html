@@ -40,7 +40,7 @@
 
     <div class="cart-avatar">
       <div class="cart-container hover">
-        <div class="cart-notification">3</div>
+        <div class="cart-notification">0</div>
         <img src="./images/icon-cart.svg" alt="shopping cart">
       </div>
       <img class="avatar hover" src="./images/image-avatar.png" alt="avatar" width="25" height="25">
@@ -71,9 +71,9 @@
         </div>
         <div class="details-quantity">
           <div class="input">
-            <img class="input-minus" src="./images/icon-minus.svg" alt="minus" width="12" height="4">
+            <img class="input-minus hover" src="./images/icon-minus.svg" alt="minus" width="12" height="4">
             <input class="input-number" type="text" value="0" name="quantity" aria-label="quantity">
-            <img class="input-plus" src="./images/icon-plus.svg" alt="plus" width="12" height="12">
+            <img class="input-plus hover" src="./images/icon-plus.svg" alt="plus" width="12" height="12">
           </div>
           <button type="button" class="details-button add-to-cart hover"> <img src="./images/icon-cart-white.svg" alt="shopping cart"> Add to cart</button>
         </div>
@@ -82,27 +82,31 @@
 
     <!-- start modal cart -->
     <div class="cart-modal">
-      <table class="cart-modal-details">
-        <thead class="thead">
-          <tr>
-            <th>Image</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="table-body">
-          <tr>
-            <td><img class="cart-img" src="./images/image-product-1-thumbnail.jpg" alt="thumnail" width="60" height="60"></td>
-            <td class="cart-description">Autumn Limited Edition...</td>
-            <td>$125.00</td>
-            <td>3</td>
-            <td><img class="cart-modal-delete" src="./images/icon-delete.svg" alt="delete"></td>
-          </tr>
-        </tbody>
-      </table>
-      <button type="button" class="details-button cart-modal-button">Checkout</button>
+      <div class="cart-modal-container">
+        <table class="cart-modal-details">
+          <thead class="thead">
+            <tr>
+              <th>Image</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td><img class="cart-img" src="./images/image-product-1-thumbnail.jpg" alt="thumnail" width="60" height="60"></td>
+              <td class="cart-description">Autumn Limited Edition...</td>
+              <td class="cart-modal-price"></td>
+              <td class="cart-modal-qty"></td>
+              <td class="cart-modal-total"></td>
+              <td><img class="cart-modal-delete" src="./images/icon-delete.svg" alt="delete"></td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="details-button cart-modal-button">Checkout</button>
+      </div>
     </div>
     <!-- End modal cart -->
 

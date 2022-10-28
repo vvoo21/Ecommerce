@@ -1,11 +1,14 @@
-import { 
+import {
   modalnavbar,
   modalCart,
   modalGallery,
   cartModalContainer,
+  addBtn,
+  notification,
+  plusBtn,
+  userInput,
+  minusBtn,
 } from './variables.js';
-
-import {lastValue, deleteProduct} from '../index.js';
 
 let imgIndex = 1;
 
@@ -37,15 +40,6 @@ export const closeModalNavbar = () => {
   modalnavbar.style.display = 'none';
 };
 
-
-export const openCart = () => {
-  modalCart.classList.toggle('show');
-
-  if(lastValue === 0){
-    createProduct();
-  }
-};
-
 export const displayModalGallery = () => {
   modalGallery.style.display = 'flex';
 
@@ -58,8 +52,34 @@ export const closeModalGallery = () => {
   modalGallery.style.display = 'none';
 };
 
+let quantity = 0;
+
+plusBtn.addEventListener('click', () => {
+  quantity += 1;
+  userInput.value = quantity;
+});
+
+minusBtn.addEventListener('click', () => {
+  quantity -= 1;
+  if (quantity <= 0) {
+    quantity = 0;
+  }
+  userInput.value = quantity;
+});
+
+let lastValue = parseInt(notification.innerHTML, 10);
+
+export const deleteProduct = () => {
+  const cartDelete = document.querySelector('.cart-modal-delete');
+  cartDelete.addEventListener('click', () => {
+    cartModalContainer.innerHTML = '<p class="cart-empty">Your cart is empty.</p>';
+    lastValue = 0;
+    notification.innerHTML = lastValue;
+  });
+};
+
 export const createProduct = () => {
-    cartModalContainer.innerHTML = `
+  cartModalContainer.innerHTML = `
     <table class="cart-modal-details">
         <thead class="thead">
           <tr>
@@ -82,15 +102,32 @@ export const createProduct = () => {
           </tr>
         </tbody>
       </table>
-      <button type="button" class="details-button cart-modal-button">Checkout</button>`
+      <button type="button" class="details-button cart-modal-button">Checkout</button>`;
 
-      deleteProduct();
+  deleteProduct();
 
-     let priceModal = document.querySelector('.cart-modal-price');
-     let qtyModal = document.querySelector('.cart-modal-qty');
-     let totalModal = document.querySelector('.cart-modal-total');
+  const priceModal = document.querySelector('.cart-modal-price');
+  const qtyModal = document.querySelector('.cart-modal-qty');
+  const totalModal = document.querySelector('.cart-modal-total');
 
-      priceModal.innerHTML = `$${125}.00`
-      qtyModal.innerHTML = lastValue;
-      totalModal.innerHTML = `$${lastValue*125}.00`;
-}
+  priceModal.innerHTML = `$${125}.00`;
+  qtyModal.innerHTML = `${lastValue}`;
+  totalModal.innerHTML = `$${lastValue * 125}.00`;
+};
+
+addBtn.addEventListener('click', () => {
+  lastValue += quantity;
+
+  notification.innerHTML = lastValue;
+  notification.style.display = 'block';
+
+  createProduct();
+});
+
+export const openCart = () => {
+  modalCart.classList.toggle('show');
+
+  if (lastValue === 0) {
+    createProduct();
+  }
+};

@@ -17,10 +17,10 @@ export const galleryPrevious = document.querySelector('.gallery-previous');
 export const galleryNext = document.querySelector('.gallery-next');
 export const imgThumnail = document.querySelectorAll('.thumnail');
 
-export let minusBtn = document.querySelector('.input-minus');
-export let plusBtn = document.querySelector('.input-plus');
-export let userInput = document.querySelector('.input-number');
+export const minusBtn = document.querySelector('.input-minus');
+export const plusBtn = document.querySelector('.input-plus');
+export const userInput = document.querySelector('.input-number');
 
 export const addBtn = document.querySelector('.add-to-cart');
-export let notification = document.querySelector('.cart-notification');
+export const notification = document.querySelector('.cart-notification');
 export const cartModalContainer = document.querySelector('.cart-modal-container');
